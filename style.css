@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;        
+    padding: 20px 40px; 
+      
+    background-color: rgba(0, 0, 0, 0.877);   
+    
+}
+
+
+
+
+
+
+
+
+    .header-item {
+    display: flex;
+    gap: 50px;
+
+  margin-right: 200px;    
+    list-style: none;
+    font-family: Montserrat SemiBold;
+    text-decoration: none;
+}
+
+
+.header-card{
+     display: flex;
+    gap: 50px;    
+     list-style: none; 
+       margin-right: 200px; 
+          margin-left: auto;
+    font-family: Montserrat SemiBold;
+   
+}
+
+.card-btn{
+    color: rgba(0, 128, 0, 0.836);
+}
