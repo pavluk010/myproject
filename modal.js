@@ -93,3 +93,27 @@ if (e.target === modal) {
 modal.classList.remove("active");
 }
 });
+
+
+
+
+
+
+const catalogBtn = document.getElementById("catalogBtn");
+const catalogModal = document.getElementById("catalogModal");
+const catalogClose = document.querySelector(".catalog-close");
+
+catalogBtn.addEventListener("click", () => {
+    catalogModal.classList.add("active");
+});
+
+catalogClose.addEventListener("click", () => {
+    catalogModal.classList.remove("active");
+});
+
+catalogModal.addEventListener("click", (e) => {
+    if (e.target === catalogModal) {
+        catalogModal.classList.remove("active");
+    }
+});
+

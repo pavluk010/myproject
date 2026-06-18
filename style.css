@@ -65,10 +65,28 @@ header {
  margin-top: 15px;
 }
 
-.card-btn{
+.card-btn {
     color: white;
     text-decoration: none;
-   
+    position: relative;
+}
+
+.card-btn:hover::after {
+    width: 100%;
+}
+
+
+.card-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+
+    width: 0%;
+    height: 4px;
+    background-color: green;
+border-radius: 2px;
+    transition: 0.3s ease;
 }
 
 
@@ -422,5 +440,91 @@ color: white;
     float: right;
     font-size: 35px;
     cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+
+
+
+.catalog-modal{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .3s;
+
+    z-index: 9999;
+}
+
+.catalog-modal.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.catalog-content{
+    width: 1200px;
+    max-width: 90%;
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.catalog-close{
+    float: right;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.catalog-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    justify-content: center;
+
+    margin-top: 30px;
+}
+
+.bike-card{
+    width: 250px;
+
+    background: #f4f4f4;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    text-align: center;
+}
+
+.bike-card img{
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+.bike-card h3{
+    margin-top: 15px;
+}
+
+.bike-card p{
+    color: green;
     font-weight: bold;
 }
